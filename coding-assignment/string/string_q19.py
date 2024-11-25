@@ -1,4 +1,4 @@
-# program to print odd length strings
+# program to print even length strings
 # Input string
 s = "This is a python language"
 
