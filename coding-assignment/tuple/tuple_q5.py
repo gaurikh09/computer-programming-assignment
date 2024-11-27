@@ -1,8 +1,9 @@
-#Remove a key from a dictionary if it exists.
-def delete_key(d, key):
-    d.pop(key, None)
-    return d
+# display according to thier frequency
+def group_by_frequency(tpl):
+    freq = defaultdict(list)
+    for item in set(tpl):
+        freq[tpl.count(item)].append(item)
+    return dict(freq)
 
 # Example
-d = {'a': 1, 'b': 2, 'c': 3}
-print(delete_key(d, 'b'))  # Output: {'a': 1, 'c': 3}
+print(group_by_frequency((1, 2, 2, 3, 4, 4, 4)))  # Output: {1: [1, 3], 2: [2], 3: [4]}
